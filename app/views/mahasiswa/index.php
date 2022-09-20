@@ -14,6 +14,7 @@
       <th scope="col">NRP</th>
       <th scope="col">Email</th>
       <th scope="col">Jurusan</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,10 @@
       <td><?= $mahasiswa["nrp"] ?></td>
       <td><?= $mahasiswa["email"] ?></td>
       <td><?= $mahasiswa["jurusan"] ?></td>
+      <td>
+        <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mahasiswa["id"] ?>" class="btn btn-info">Detail</a>
+        <a href="<?= BASEURL ?>/mahasiswa/delete" class="btn btn-danger">Delete</a>
+      </td>
     </tr>
     <?php $i++ ?>
     <?php endforeach; ?>
